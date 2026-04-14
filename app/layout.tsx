@@ -16,6 +16,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Roads Bistro",
   description: "Resturant in Viginia Beach serving up tapas",
+  openGraph: {
+    title: "The Roads Bistro",
+    description: "Food, drinks, and live music",
+    type: "website",
+    url: "https://theroadsbistro.com",
+    siteName: "The Roads Bistro",
+    images: [{
+    url: 'https://imgur.com/gallery/aboutus-pZzpr4G',
+    width: 1200,
+    height: 630,}
+    ]
+  },
 };
 
 export default function RootLayout({
@@ -25,6 +37,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

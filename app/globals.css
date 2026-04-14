@@ -16,6 +16,7 @@ main{
       --mainColor2:#D9CBBF;
 
 }
+
 .mainBod {
       display: flex;
       background-image: url("/images/bistroMainImage.jpg");
@@ -32,7 +33,7 @@ main{
 
 }
 .topofthepop{
-    display: flex;
+      display: flex;
       background-image: url("/images/bistroMainImage.jpg");
       background-size: cover;
       background-repeat: no-repeat;
@@ -222,95 +223,24 @@ h1{
       font-size: 5vw;
       margin-top: 10vh;
 }
-h2{
+h2
+      {
       text-align: center;
       color: var(--mainColor2);
       font-family: "Helvetica Neue", sans-serif;
       font-size: 3vw;
       margin-top: 10vh;
-}
+      }
 
-h3{
-  font-weight: bold;
-}
+h3
+      {
+      font-weight: bold;
+      }
 #siteHeaders{
       font-family: "Helvetica Neue", sans-serif;
-      font-size: 50px;
+      font-size: 75px;
 }
-#calendar {
 
-
-      color: var(--mainColor2);
-      padding: 10px;
-
-      border-radius: 10px;
-      width: 60vw;
-      margin: 0 auto;
-}
-#events-list{
-      display: flex;
-      flex-direction: row; /* Stacks items vertically */
-      flex-wrap: wrap; /* Allows items to wrap to a new column */
-      height: auto; /* Crucial: a fixed height is needed for wrapping to occur */
-      list-style-type: none;
-      gap: 8px;
-      overflow: hidden;
-     text-align: left;
-
-}
-#events-list li {
-      width: 45%;
-      height: auto;
-      margin-bottom: 15px;
-      padding: 10px;
-      border-radius: 5px;
-      color: var(--mainColor2);
-      list-style: none;
-      align-content: center;
-
-}
-#jazzContainer{
-      margin-left: auto;
-      margin-right: auto;
-      width:100%;
-      height: 700px;
-      overflow: hidden;
-      mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-
-
-
-
-}
-#jazzImage{
-
-      margin-left: auto;
-      margin-right: auto;
-      object-fit: cover;
-      width:100%;
-      height:auto;
-
-
-
-
-
-
-}
-#musicSummary{
-      font-size: 2rem;     /* bigger title */
-      font-weight: 500;
-      margin-bottom:0px;
-      font-family: "Helvetica Neue", sans-serif;
-
-}
-#musicContainer{
-      width: 50vw;
-      margin: 0 auto; /* 🔑 centers horizontally */
-}
-#musicDate{
-      font-size: 1.3rem;    /* smaller date/time */
-      opacity: 0.8;
-      font-weight:300 ;
-      font-family: "Helvetica Neue", sans-serif;}
 
 #UpperNavBar{
       display: flex;
@@ -327,10 +257,14 @@ h3{
       transition: transform 0.5s ease;
       font-family: "Helvetica Neue", sans-serif;
       mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-
+      gap: 40px;
+      width: 100%;
+      margin: 0 auto;      /* centers inner content */
+      padding-right:75px;
 
 
 }
+
 #UpperNavBar a{
       text-decoration: none;
       color: var(--mainColor2);
@@ -367,27 +301,29 @@ h3{
       padding: 1px;
       border-radius: 25px;
 
-;
-
 }
-.menu h3{
-      font-size: 1.5rem;     /* bigger title */
+#menuItemName{
+      font-size: 25px;
+}
+.menu h2{
+      font-size: 35px;     /* bigger title */
       font-weight: 500;
       margin-bottom:0;
       font-family: "Helvetica Neue", sans-serif;
       color: var(--mainColor);
-
+      margin: 20px;
 
 }
-.hotMenuItems{
+
+.menuItems{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 0rem;
-      max-width: 1000px;    /* controls how wide the menu can be */
-      margin: 0 auto;       /* centers the grid */
+      gap: 2rem;
+      max-width: 750px;    /* controls how wide the menu can be */
+      margin: 0 auto;         /* centers the grid */
 
 }
-.hotMenuItems li{
+.menuItems li{
 
       height: auto;
       padding-right: 10px;
@@ -398,12 +334,17 @@ h3{
 
 
 }
-.hotMenuItem p{
+.menuItems p{
       font-size: 1.1rem;    /* smaller date/time */
       opacity: 0.8;
       font-weight:300 ;
       font-family: "Helvetica Neue", sans-serif;
       color: var(--mainColor);
+}
+
+#menuTitle{
+      font-weight: bolder;
+      font-size: 75px;
 }
 .classification{
       display: flex;
@@ -436,10 +377,7 @@ h3{
       text-align: center;
       font-family: "Helvetica Neue", sans-serif;
 }
-.menu h2{
-      color: var(--mainColor);
-      margin: 20px;
-}
+
 .fa {
       padding: 15px;
       font-size: 30px;
@@ -559,35 +497,249 @@ h3{
       color: var(--mainColor2);
       font-weight: bold;
 }
-.input {
+
+
+#musicShit{
+      width: 80%;
+      margin: 0 auto;
+      color: var(--mainColor2);
+      padding: 10px;
+      border-radius: 10px;
+      margin: 0 auto;   
+}
+#events-list{
+ 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* same as your 45% */
+  gap: 8px;
+  overflow: hidden;
+
+
+ 
+
+}
+#events-list li {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+      border-radius: 5px;
+      color: var(--mainColor2);
+      list-style: none;
+      align-content: center;
+      min-height: 550px; /* adjust to taste */
+     
+     
+
+
+}
+#jazzContainer{
+      margin-left: auto;
+      margin-right: auto;
+      width:100%;
+      overflow: hidden;
+
+      
+
+
+
+
+}
+#jazzImage{
+
+      margin-left: auto;
+      margin-right: auto;
+      object-fit: cover;
+      width:100%;
+      height:auto;
+
+
+
+
+
+
+}
+.musicSummary{
+      font-size: 2rem;     /* bigger title */
+      font-weight: 500;
+      margin-bottom:0px;
+      font-family: "Helvetica Neue", sans-serif;
+      
+
+}
+
+.musicDate{
+      font-size: 1.3rem;    /* smaller date/time */
+      opacity: 0.8;
+      font-weight:300 ;
+      font-family: "Helvetica Neue", sans-serif;}
+
+.musicPicture {
+      width: 100vw;
+      height: 400px;
+      object-fit: cover;
+     
+}
+
+.musicBox{
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
       margin: auto;
-      gap: 15px;
 }
-
-.input label {
-      width: 100%;
-      text-align: center;
+.fa-brands {
       color: var(--mainColor2);
-      font-family: "Helvetica Neue", sans-serif;
-      font-size: 2rem;
+      font-size: 50px;
+      padding: 15px;
+      transition: transform 0.3s ease;
+}
+@media (max-width: 768px) {
+
+  /* Container stacking instead of side-by-side */
+  .mainBod,
+  .topofthepop,
+  #header,
+  .info,
+  .aboutUs{
+    flex-direction: column !important; /* stacks items */
+    align-items: center;
+  }
+
+  /* Resize logos/images */
+  #logoContainer {
+    width: 350px;
+    height: 350px;
+  }
+  #name, #restName {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  /* Navbar smaller + centered */
+  #navBar {
+    margin-right: 0;
+    align-items: center;
+  }
+  #navBar a {
+    font-size: 30px;
+    padding: 10px;
+    filter: drop-shadow(0px 1px 3px rgb(0, 0, 0));
+    
+  }
+
+  /* Adjust text sizes */
+  h1 { font-size: 50px; }
+  h2 { font-size: 20px; }
+  #menuTitle { font-size: 40px; }
+
+  
+  /* Grid layouts like menu */
+  .menuItems {
+    grid-template-columns: 1fr; /* single column */
+  }
+
+  /* Remove large paddings/margins that crush mobile */
+  #header, .info, .aboutUs {
+    padding: 20px;
+  }
+
+  /* Fix overflow */
+  body {
+    overflow-x: hidden;
+  }
+  #musicShit{
+      width: 100%;
+      margin: 0 auto;
+      color: var(--mainColor2);
+      padding: 10px;
+      border-radius: 10px;
+      margin: 0 auto;   
+}
+#events-list{
+ 
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  overflow: hidden;
+
+
+ 
+
+}
+#events-list li {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+      border-radius: 5px;
+      color: var(--mainColor2);
+      list-style: none;
+      align-content: center;
+      min-height: 550px; /* adjust to taste */
+     
+     
+
+
+}
+#UpperNavBar{
+
+      justify-content: center;
+      padding-right: 0px;
+
+
 }
 
-.input input,
-.input textarea {
-      width: 40%;   /* better than 25% */
-      padding: 10px;
-      font-size: 1rem;
-      border-radius: 5px;
-      border: 1px solid #ccc;
+#UpperNavBar a{
+     
+      font:  25px  "Helvetica Neue", sans-serif;
+      font-weight: bold;
+      padding: 5px;
+      margin-top: 7px;
+      
+
+
 }
-.input input,
-.input textarea {
-      width: 40%;       /* same width for all */
-      max-width: 400px; /* optional, limits extra stretching */
-      padding: 10px;
-      box-sizing: border-box; /* includes padding in width */
+
+  
+.menu{
+      width: 90%;
+      margin: auto;
+}
+footer{
+     display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.aboutUsBox{
+     
+      width: 80%;
+      height: auto;
+
+
+}
+#bikePicture{
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center; /* Centers horizontally */
+      align-items: center;
+      width: 90%;
+      height: auto;
+     
+      margin: auto;
+      gap: 40px;
+      padding-bottom: 100px;
+      
+
+
+}
+.key,.classification{
+      width: 90%;
+}
+#frontWheel, #backWheel, #logo{
+      filter: drop-shadow(0px 1px 3px rgb(237, 196, 143));
+}
+.topofthepop{
+      mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 85%, transparent 100%);
+}
 }

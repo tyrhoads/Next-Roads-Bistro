@@ -39,14 +39,14 @@ export default function LiveMusic() {
       <div id="jazzContainer">
         <Image
           id="jazzImage"
-          src="/images/jazzImage.jpg"
+          src="/images/MainJazzImage-1.jpg"
           alt="jazz image"
           width={1000}
           height={1000}
         />
       </div>
 
-      <div id="musicContainer">
+      
         <section id="musicShit">
           <h2 id="siteHeaders">Upcoming Events</h2>
           {loading && <p>Loading events...</p>}
@@ -61,15 +61,16 @@ export default function LiveMusic() {
 
               return (
                 <li key={index} className="musicBox">
-                    <div className="musicSummary">{event.title}</div>
+                    
                   <div className="musicPhoto">
                     <Image className="musicPicture"
                       src={driveUrl}
                       alt={event.title}
-                      width={500}
-                      height={500}
+                      width={2000}
+                      height={2000}
                     />
                   </div>
+                  <div className="musicSummary">{event.title}</div>
                   <div className="musicDate">
                     {new Date(event.start).toLocaleString(undefined, {
                       weekday: "short",
@@ -85,7 +86,7 @@ export default function LiveMusic() {
             })}
           </ul>
         </section>
-      </div>
+     
     </main>
   );
 }

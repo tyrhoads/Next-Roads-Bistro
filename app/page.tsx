@@ -21,6 +21,7 @@ export default function Home() {
                 height={80} // adjust as needed
               />
             </Link>
+            
 
             <div id="logoContainer">
               <Image
@@ -52,6 +53,8 @@ export default function Home() {
         <nav id="navBar">
           <Link href="/menu">Menu</Link>
           <Link href="/livemusic">Live Music</Link>
+          <a href="tel:+17579041566">Call Us</a>
+          <a href="mailto:whatyousippinon@theroadsbistro.com">Email Us</a>
         </nav>
       </div>
       </div>
@@ -76,12 +79,12 @@ export default function Home() {
           <a
             href="https://www.facebook.com/TheRoadsBistro"
             target="_blank"
-            className="fa fa-facebook"
+            className="fa-brands fa-facebook"
           ></a>
           <a
             href="https://www.instagram.com/theroadsbistrovb/"
             target="_blank"
-            className="fa fa-instagram"
+            className="fa-brands fa-instagram"
           ></a>
         </div>
       </section>
@@ -90,7 +93,7 @@ export default function Home() {
         <div className="aboutPic">
           <Image
             className="aboutPic"
-            src="/images/mikyBoy.jpg"
+            src="/images/aboutUs.jpg"
             alt="About Us Picture"
             width={400}
             height={300}
