@@ -742,4 +742,12 @@ footer{
 .topofthepop{
       mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 85%, transparent 100%);
 }
+#backWheel{
+      top: 66.5%;
+      left: 73.5%;
+}
+#frontWheel{
+      top:28.7%;
+      left: 3.5%;
+}
 }
