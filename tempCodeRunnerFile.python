@@ -1,0 +1,12 @@
+from qwlist import Lazy
+
+def main() -> None:
+    the_sum = (
+        Lazy(range(0, 10_000))
+    )
+
+    print(f"{the_sum:}")
+
+
+if __name__ == "__main__":
+    main()pip install qwlist
