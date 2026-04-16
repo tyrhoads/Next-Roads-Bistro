@@ -737,7 +737,7 @@ footer{
       width: 90%;
 }
 #frontWheel, #backWheel, #logo{
-      filter: drop-shadow(0px 1px 3px rgb(200, 200, 200));
+      filter: drop-shadow(0px 1px 3px rgb(205, 118, 5));
 }
 .topofthepop{
       mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 85%, transparent 100%);
