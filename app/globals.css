@@ -594,7 +594,7 @@ h3
       padding: 15px;
       transition: transform 0.3s ease;
 }
-@media (max-width: 768px) {
+@media (max-width: 1210px) {
 
   /* Container stacking instead of side-by-side */
   .mainBod,
