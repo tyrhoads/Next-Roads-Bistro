@@ -432,11 +432,12 @@ h3
 }
 
 #bikePicture{
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       justify-content: center; /* Centers horizontally */
       align-items: center;
       width: 90%;
-      height: 40vh;
+      height: auto;
       overflow: hidden;
       margin: auto;
       gap: 40px;
@@ -737,7 +738,7 @@ footer{
       width: 90%;
 }
 #frontWheel, #backWheel, #logo{
-      filter: drop-shadow(0px 1px 3px rgb(230, 230, 230));
+      filter: drop-shadow(0px 0px 1.5px rgb(79, 79, 79));
 }
 .topofthepop{
       mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 85%, transparent 100%);

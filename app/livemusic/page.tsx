@@ -39,9 +39,9 @@ export default function LiveMusic() {
       <div id="jazzContainer">
         <Image
           id="jazzImage"
-          src="/images/MainJazzImage-1.jpg"
+          src="/images/jazzPlay.jpg"
           alt="jazz image"
-          width={1000}
+          width={2000}
           height={1000}
         />
       </div>
