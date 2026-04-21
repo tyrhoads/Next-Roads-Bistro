@@ -117,15 +117,29 @@ export default function Home() {
           className="bikePicture"
           src="/images/hangingBike.jpg"
           alt="Bike Picture"
-          width={500}
-          height={300}
+          width={2000}
+          height={1000}
         />
         <Image
           className="bikePicture"
           src="/images/glasses.jpg"
           alt="Glasses Picture"
-          width={500}
-          height={300}
+          width={2000}
+          height={1000}
+        />
+        <Image
+          className="bikePicture"
+          src="/images/picOfBar.jpg"
+          alt="Glasses Picture"
+          width={2000}
+          height={1000}
+        />
+        <Image
+          className="bikePicture"
+          src="/images/roadSide.jpg"
+          alt="Glasses Picture"
+          width={2000}
+          height={1000}
         />
       </div>
 
