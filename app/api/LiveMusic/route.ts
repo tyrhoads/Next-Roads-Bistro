@@ -18,7 +18,7 @@ export async function GET() {
     // Map events into simpler format for frontend
     const events = (data.items || []).map((event: any) => {
       // Grab image from Google Drive if available
-      let image = "/images/liveMuiscPlaceHolder.jpg"; // fallback
+      let image = "/images/musicLogo.jpg"; // fallback
       if (event.attachments && event.attachments[0]?.fileUrl) {
         // Convert Drive file link to direct view link
         image = event.attachments[0].fileUrl.replace("/view?usp=drive_web", "?export=view");

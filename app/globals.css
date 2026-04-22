@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 html{
       scroll-behavior: smooth;
       background-color: var(--mainColor);
@@ -39,12 +40,12 @@ main{
       background-repeat: no-repeat;
       background-attachment: scroll;
       background-position: center;
-      height: 110vh;
+      min-height: 100vh;
       width: 100%;
       flex-direction: column;
       margin: 0;
       scroll-behavior: smooth;
-      mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
 
 
 }
@@ -170,7 +171,7 @@ main{
 #navBar a {
       text-decoration: none;
       color: var(--mainColor2);
-      font:  35px  "Helvetica Neue", sans-serif;
+      font:  45px 'Amatic SC', cursive;
       font-weight: bold;
       display: block;
       padding: 30px 30px;
@@ -219,7 +220,7 @@ html, body {
 h1{
       text-align: center;
       color: var(--mainColor2);
-      font-family: "Helvetica Neue", sans-serif;
+      font-family: 'Amatic SC', cursive;
       font-size: 5vw;
       margin-top: 10vh;
 }
@@ -227,7 +228,7 @@ h2
       {
       text-align: center;
       color: var(--mainColor2);
-      font-family: "Helvetica Neue", sans-serif;
+      font-family: 'Amatic SC', cursive;
       font-size: 3vw;
       margin-top: 10vh;
       }
@@ -576,18 +577,22 @@ h3
       font-family: "Helvetica Neue", sans-serif;}
 
 .musicPicture {
-      width: 100vw;
-      height: 400px;
       object-fit: cover;
      
 }
-
+.musicPhoto{
+      position: relative;   /* REQUIRED for fill */
+      width: 100%;
+      aspect-ratio: 1 / 1;  /* square */
+      overflow: hidden;
+     
+}
 .musicBox{
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
-      margin: auto;
+     
 }
 .fa-brands {
       color: var(--mainColor2);
@@ -751,4 +756,13 @@ footer{
       top:28.7%;
       left: 3.5%;
 }
+.musicPicture{
+      object-fit: cover;
+}
+
+#events-list li {
+  height: auto;
+  min-height: unset;
+}
+
 }
