@@ -1,28 +1,19 @@
-"use client";
-import { useEffect, useState } from "react";
-import Navbar from "../components/NavBar";
 
+import Navbar from "../components/NavBar";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
 type MenuItem = {
   category: string;
   name: string;
   description?: string;
 };
 
-export default function Menu() {
-  const [menu, setMenu] = useState<MenuItem[]>([]);
 
-  useEffect(() => {
-    fetch("/api/menu")
-        .then((res) => {
-          console.log("API status:", res.status); // check HTTP status
-          return res.json();
-        })
-        .then((data) => {
-          console.log("Fetched menu:", data); // log what you get
-          setMenu(data);
-        })
-        .catch((err) => console.error("Fetch error:", err));
-  }, []);
+export default async function LiveMusic() {
+  const res = await fetch(`${baseUrl}/api/menu`, {
+    cache: "no-store", // or "force-cache" if data is stable
+  });
+
+  const menu: MenuItem[] = await res.json();
 
   const hotItems = menu.filter((item) => item.category === "hot");
   const coldItems = menu.filter((item) => item.category === "cold");

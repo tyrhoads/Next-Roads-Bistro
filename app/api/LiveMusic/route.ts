@@ -1,11 +1,20 @@
 // app/api/LiveMusic/route.ts
 import { NextResponse } from "next/server";
 
+
 const CALENDAR_ID = "5e02ed53d168186921c77d383ed856b720fe696921ced1ff8df524d4841ddc29@group.calendar.google.com";
 const API_KEY = process.env.API_KEY_MUSIC; 
 const MAX_RESULTS = 20;
+const CACHE_DURATION = 1000 * 60 * 5; // 5 minutes
+let cachedEvents: any[] = [];
+let lastFetch = 0;
 
 export async function GET() {
+  // Serve cached menu if it's still fresh
+  const now = Date.now();
+    if (cachedEvents.length && now - lastFetch < CACHE_DURATION) {
+      return NextResponse.json(cachedEvents);
+    }
   try {
     const now = new Date().toISOString();
     const url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}&singleEvents=true&orderBy=startTime&timeMin=${now}&maxResults=${MAX_RESULTS}&supportsAttachments=true`;

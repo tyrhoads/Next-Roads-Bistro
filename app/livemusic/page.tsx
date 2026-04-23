@@ -1,9 +1,7 @@
-"use client";
 
-import { useEffect, useState } from "react";
 import Navbar from "@/app/components/NavBar";
 import Image from "next/image";
-
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
 interface Event {
   title: string;
   description: string;
@@ -12,25 +10,13 @@ interface Event {
   image: string;
 }
 
-export default function LiveMusic() {
-  const [events, setEvents] = useState<Event[]>([]);
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    async function fetchEvents() {
-      try {
-        const res = await fetch("/api/LiveMusic"); // ✅ fixed URL
-        const data = await res.json();
-        setEvents(data);
-      } catch (err) {
-        console.error("Failed to fetch events:", err);
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchEvents();
-  }, []);
+export default async function LiveMusic() {
+  const res = await fetch(`${baseUrl}/api/LiveMusic`, {
+    cache: "no-store", // or "force-cache" if data is stable
+  });
 
+  const events: Event[] = await res.json();
   return (
     <main>
       <Navbar />
@@ -49,8 +35,6 @@ export default function LiveMusic() {
       
         <section id="musicShit">
           <h2 id="siteHeaders">Upcoming Events</h2>
-          {loading && <p>Loading events...</p>}
-          {!loading && events.length === 0 && <p>No upcoming events found.</p>}
 
           <ul id="events-list">
             {events.map((event, index) => {
