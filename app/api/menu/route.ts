@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 let cachedMenu: any[] = [];
 let lastFetch = 0;
-const CACHE_DURATION = 0; // 5 minutes
+const CACHE_DURATION = 1000 * 60 * 5; // 5 minutes
 
 export async function GET() {
   const now = Date.now();
