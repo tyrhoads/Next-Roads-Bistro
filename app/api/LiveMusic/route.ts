@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 const CALENDAR_ID = "5e02ed53d168186921c77d383ed856b720fe696921ced1ff8df524d4841ddc29@group.calendar.google.com";
 const API_KEY = process.env.API_KEY_MUSIC; 
 const MAX_RESULTS = 20;
-const CACHE_DURATION = 1000 * 60 * 5; // 5 minutes
+const CACHE_DURATION = 0; // 5 minutes
 let cachedEvents: any[] = [];
 let lastFetch = 0;
 
