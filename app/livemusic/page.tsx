@@ -56,10 +56,17 @@ export default async function LiveMusic() {
                   </div>
                   <div className="musicSummary">{event.title}</div>
                   <div className="musicDate">
-                    {new Date(event.start).toLocaleString(undefined, {
+                    {new Date(event.start).toLocaleString("en-US", {
+                      timeZone: "America/New_York",
                       weekday: "short",
                       month: "short",
                       day: "numeric",
+                      hour: "numeric",
+                      minute: "2-digit",
+                    })}
+                    {" - "}
+                     {new Date(event.end).toLocaleString("en-US", {
+                      timeZone: "America/New_York",
                       hour: "numeric",
                       minute: "2-digit",
                     })}
