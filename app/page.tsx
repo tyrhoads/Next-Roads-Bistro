@@ -102,12 +102,12 @@ export default function Home() {
         <div className="aboutUsBox">
           <h3>About Us</h3>
           <p>
-            Nothing brings people together like good music, good food, and a
-            great drink. Unfortunately, we suck at making music so we chose to
-            start our business around the things we ARE good at. Bring your
-            friend (or two), sit at a table, or relax on the couch. Open Monday
-            through Saturday, so come check us out. Oh, did we mention we have
-            funky hats? See you soon!
+           Nothing brings people together like good food, good drinks and great music. 
+           Unfortunately, we suck at making music so we chose to start our business 
+           around the things we are good at. We have since found out how to hire great 
+           musicians. So come join us with a friend (or twelve) and enjoy some good food, 
+           good drinks and great music. We are open Tuesday through Saturday with live music 
+           every evening. See you all soon!
           </p>
         </div>
       </div>
