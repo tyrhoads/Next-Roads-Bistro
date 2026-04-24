@@ -17,6 +17,9 @@ export default function Footer(){
     <h3>
         <a href="mailto:whatyousippinon@theroadsbistro.com">whatyousippinon@theroadsbistro.com</a>
     </h3>
+    <h3>
+        Website and Photography by Tyler Rhoads.
+    </h3>
 </footer>
   )
 }

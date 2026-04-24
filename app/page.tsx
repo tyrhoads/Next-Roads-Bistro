@@ -65,6 +65,7 @@ export default function Home() {
             <a
               href="https://maps.app.goo.gl/Z8Wf75X9fT85npNw5"
               target="_blank"
+              className="mapLocation"
             >
               3809 Princess Anne Road Unit 123, Virginia Beach, VA
             </a>
